@@ -1,0 +1,89 @@
+.blog-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    padding: 100px 0 50px 0;
+}
+.blog-section ul {
+    position: relative;
+    width: 90%;
+}
+.blog-section .container {
+    flex-wrap: wrap;
+    background-color: transparent;
+    margin: 30px 0;
+}
+.blog {
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 5px;
+}
+.blog img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.blog .box-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5px;
+}
+.blog .box-info p {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: snow;
+}
+.blog .box-info h2 {
+    position: relative;
+    margin: 5px 0;
+    color: snow;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.blog {
+    display: none;
+}
+
+.blog.active {
+    display: flex;
+}
+.blog.active {
+    display: flex;
+    animation: matchBoxAnimate .5s ease-in 1 both;
+}
+
+@keyframes matchBoxAnimate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 838px) {
+    .blog-section {
+        padding: 160px 0 50px 0;
+    }
+}
+@media (max-width: 1029.33px) {
+    .blog-section > ul.ulForBlog {
+        justify-content: center;
+    }
+}

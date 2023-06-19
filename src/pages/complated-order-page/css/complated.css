@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.complated-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.complated-section .container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.complated-section > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.complated-section > a {
+    position: relative;
+    padding: 10px 20px;
+    margin: 20px 0 10px 0;
+    color: snow;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    background-image: linear-gradient(45deg  , rgb(28, 100, 255) , rgb(89, 47, 187));
+}
+.complated-section > a:hover {
+    transform: translateY(-5px);
+}

@@ -1,0 +1,227 @@
+/* .container.vr-headest-container {
+    width: 98%;
+    gap: 10px;
+    margin: 50px auto;
+}
+.container.vr-headest-container .heading-and-switch-VR {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 30px 0;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading h2.section-title h2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 40px;
+    background-image: linear-gradient(to right, #181bb3, #ff0000);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading h2.section-title h2 img{
+    width: 100px;
+    margin-right: 7px;
+}
+.container.vr-headest-container .heading-and-switch-VR > ul {
+    justify-content: center;
+    width: 40%;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading {
+    width: 40%;
+}
+@media (max-width: 620px) {
+    .container.vr-headest-container .heading-and-switch-VR .heading,
+    .container.vr-headest-container .heading-and-switch-VR > ul {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container.vr-headest-container .heading-and-switch-VR > ul {
+        margin: 20px 0;
+    }
+    .container.vr-headest-container .heading-and-switch-VR .heading {
+        flex-direction: column;
+    }
+}
+.container.vr-headest-container .heading-and-switch-VR > ul > li:nth-child(5),
+.container.vr-headest-container .heading-and-switch-VR > ul > li:last-child {
+    display: none;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading > h2 > i {
+    letter-spacing: 10px;
+}
+.container.vr-boxes-container {
+    width: 100%;
+} */
+
+
+.VR-card {
+    position: relative;
+    width: 280px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 1;
+    display: none;
+    transition: .5s;
+    transform: scale(0);
+}
+.VR-card.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    animation: VR-card-animate .5s ease-in both;
+}
+@keyframes VR-card-animate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.VR-card .VR-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    overflow: hidden;
+}
+.VR-card .VR-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.VR-card:hover .VR-img img {
+    scale: 1.1;
+    rotate: -10deg;
+}
+.VR-card .VR-img img.first-img {
+    opacity: 0;
+}
+.VR-card:hover .VR-img img.second-img {
+    opacity: 0;
+}
+.VR-card:hover .VR-img img.first-img  {
+    opacity: 1;
+}
+.VR-card .VR-img .VR-cover {
+    position: absolute;
+    right: -300px;
+    background-color: rgb(48 57 195);
+    padding: 10px 15px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    opacity: 0;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.VR-card .VR-img .VR-cover > i {
+    font-size: 18px;
+    color: snow;
+    cursor: pointer;
+    transition: .3s;
+}
+.VR-card .VR-img .VR-cover > i.active {
+    color: rgb(255, 16, 16);
+}
+.VR-card:hover .VR-img .VR-cover {
+    right: 0;
+    opacity: 1;
+}
+.VR-card .VR-info {
+    position: relative;
+    margin-top: 10px;
+}
+.VR-card .VR-info h2.vr-name {
+    margin: 5px 0;
+    color: snow;
+    font-size: 18px;
+}
+.VR-card .VR-info p.vr-rate {
+    color: #7fffff;
+    font-size: 16px;
+    margin: 5px 0;
+}
+.VR-card .VR-info p.vr-about {
+    color: snow;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.VR-card .VR-info h3.vr-price {
+    color: rgb(32, 217, 217);
+    margin: 5px 0;
+    position: relative;
+}
+.VR-card .VR-info h3.vr-price::after {
+    content: "$";
+    position: absolute;
+    top: -5px;
+    right: -9px;
+    color: rgb(48 57 195);
+    font-size: 13px;
+}
+.VR-card .VR-info .price-and-add-to-cart {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.VR-card .VR-info .price-and-add-to-cart h3.vr-price {
+    color: rgb(48, 57, 195);
+}
+.VR-card .VR-info .price-and-add-to-cart button.add-to-cart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    background-color: rgb(48, 57, 195);
+    color: snow;
+}
+.VR-card .VR-info .price-and-add-to-cart button.add-to-cart::after {
+    content: "";
+    position: absolute;
+    top: -75px;
+    left: -50px;
+    background-color: rgba(255, 255, 255, 0.269);
+    width: 20px;
+    height: 150px;
+    rotate: 30deg;
+}
+.VR-card .VR-info .price-and-add-to-cart button.add-to-cart:hover::after {
+    animation: addToCart-animate 2s linear  infinite;
+}
+@keyframes addToCart-animate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+.VR-card .VR-info .price-and-add-to-cart button.add-to-cart > i {
+    margin-left: 7px;
+    transition: .5s;
+}

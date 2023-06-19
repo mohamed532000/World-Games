@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.About-section {
+    position: relative;
+    padding: 150px 0 50px 0;
+}
+.About-section .container {
+    margin: 40px auto;
+    justify-content: center;
+    align-items: center;
+}
+.About-section .container .about-img {
+    position: relative;
+    width: 500px;
+    height: 370px;
+    margin-right: 120px;
+    overflow: hidden;
+    transition: .5s;
+
+}
+.About-section .container .about-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+.About-section .container .about-img:hover {
+    transform: scale(.9);
+}
+.About-section .container .about-img:hover img {
+    transform: scale(1.2);
+}
+.About-section .container .parent-text-boxes-and-switch {
+    position: relative;
+    width: 500px;
+    padding: 10px;
+}
+.parent-text-boxes-and-switch ul {
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid rgba(193, 193, 193, 0.441);
+}
+.parent-text-boxes-and-switch ul li:first-of-type {
+    margin-left: 0;
+}
+.parent-text-boxes-and-switch .text-boxes {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 350px;
+    overflow: hidden;
+}
+.parent-text-boxes-and-switch .text-boxes .text-box {
+    color: snow;
+    position: absolute;
+    left: -400px;
+    opacity: 0;
+    transition: 1s;
+    width: 100%;
+}
+.parent-text-boxes-and-switch .text-box.active {
+    left: 0;
+    opacity: 1;
+}
+.parent-text-boxes-and-switch .text-box h2 {
+    margin: 10px 0;
+}
+.parent-text-boxes-and-switch .text-box p {
+    color: #777;
+}
+.parent-text-boxes-and-switch .text-box .read-more {
+    left: 20px;
+}
+
+@media (max-width: 648px) {
+    .About-section .container .counter-box {
+        width: 95%;
+        text-align: center;
+    }
+}
+
+.about-swiper-line {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+}
+.swiper-container .person-box {
+    position: relative;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px;
+}
+.person-box .person-img {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+.person-box .person-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.person-box .person-img a.show-profile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    color: snow;
+    opacity: 0;
+}
+.person-box .person-img a.show-profile::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right , #3d246bb5 , #182968b0);
+    opacity: 0;
+    transition: .5s;
+    z-index: 1;
+}
+.person-box .person-img a.show-profile h3 {
+    z-index: 99;
+    font-weight: normal;
+}
+.person-box .person-img a.show-profile:hover::after {
+    opacity: 1;
+}
+.person-box .person-img:hover a {
+    opacity: 1;
+}
+.person-box .person-info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.person-box .person-info h2.person-name {
+    margin: 10px 0;
+}
+.person-box .person-info .person-sochial-media {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.person-box .person-info h2.person-name {
+    color: snow;
+    letter-spacing: 1px;
+}
+.person-box .person-info .person-sochial-media i {
+    margin: 10px 5px;
+    font-size: 20px;
+    color: rgb(194, 194, 194);
+    transition: .5s;
+}
+.person-box .person-info .person-sochial-media i:hover {
+    color: snow;
+    transform: translateY(-5px);
+}
+
+
+/********************* style for first section *****************************/
+
+
+@media (max-width: 677px) {
+    .About-section .container .about-img,
+    .About-section .container .parent-text-boxes-and-switch {
+        width: 90%;
+        margin: 40px auto;
+    }
+}
+@media (max-width: 1029.33px) {
+    .About-section .container .about-img {
+        margin-right: 0;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .About-section .container .about-img,
+    .About-section .container .parent-text-boxes-and-switch {
+        width: 90%;
+        margin: 40px auto;
+    }
+}
+
+/********************* style for first section *****************************/
+
+
+
+
+
+/* best moments style ***********************************/
+.best-moments-container {
+    margin-top: 70px;
+    width: 100%;
+}
+.best-moments-container .heading {
+    margin-bottom: 40px;
+} 
+/********************************************************/
+@media (min-width: 10px) and (max-width: 425px) {
+    .About-section .container .parent-text-boxes-and-switch {
+        width: 100%;
+    }
+    .parent-text-boxes-and-switch ul li {
+        font-size: 14px;
+    }
+    .parent-text-boxes-and-switch .text-boxes {
+        height: 450px;
+    }
+    .parent-text-boxes-and-switch .text-boxes .text-box {
+        text-align: center;
+    }
+    .parent-text-boxes-and-switch .text-boxes .text-box > h2 {
+        font-size: 15px;
+    }
+    .parent-text-boxes-and-switch .text-boxes .text-box > p {
+        font-size: 13px;
+    }
+    .parent-text-boxes-and-switch .text-boxes .text-box .read-more {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (min-width: 425px) and (max-width: 615px) {
+    .parent-text-boxes-and-switch .text-boxes {
+        height: 500px;
+    }
+}
+
+
+@media (max-width: 730px) {
+    section.About-section {
+        padding: 160px 0 50px 0;
+    }
+    section.About-section .container {
+        flex-direction: column;
+    }
+    section.About-section .container .about-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 731px) {
+    .About-section .container .normal-box {
+        width: 100%;
+    }
+}
+
+/************* style for best moments boxes *********************************/
+
+@media (max-width: 700px) {
+    .best-moments-container .match-box,
+    .best-moments-container .match-box .moment-img-and-info {
+        flex-wrap: wrap;
+    }
+    .best-moments-container .match-box .moment-img-and-info .one-img {
+        margin: 0;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .best-moments-container .match-box .moment-img-and-info .name-of-match {
+        text-align: center;
+        margin: 20px 0;
+    }
+}

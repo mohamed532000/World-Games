@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.heading {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px;
+    width: 90%;
+}
+.heading h2.section-title {
+    margin: 10px 0;
+    font-size: 45px;
+    color: transparent;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #181bb3, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.heading h2.section-title > h2 {
+    background-image: linear-gradient(to right, #181bb3, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.heading p.section-info {
+    color: #bbb;
+}
+
+div.vr-heading-div {
+    position: relative;
+    display: flex;
+}
+div.vr-heading-div > img {
+    width: 70px;
+    margin-right: 5px;
+}
+
+
+
+@media (max-width: 700px) {
+    .heading h2.section-title,
+    .heading p.section-info {
+        text-align: center;
+    }
+
+}

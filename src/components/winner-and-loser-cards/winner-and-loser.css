@@ -1,0 +1,57 @@
+.card {
+    position: relative;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 52, 52);
+    margin: 0 10px;
+}
+.card.win::after {
+    content: "win";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: aliceblue;
+    color: black;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: winnerAnimate 7s linear 3s infinite both;
+}
+@keyframes winnerAnimate {
+    0%,100% {
+        background-color: aliceblue;;
+        color: black;
+    }
+    25% {
+        background-color: rgb(113, 39, 186);
+        color: snow;
+    }
+    50% {
+        background-color: rgb(10, 21, 181);
+        color: snow;
+    }
+    75% {
+        background-color: rgb(29, 11, 78);
+        color: snow;
+    }
+}
+.card img {
+    position: relative;
+    width: 100px;
+    margin: 15px 0;
+}
+.card h3 {
+    color: snow;
+}
+.card h3,
+.card h4 {
+    margin: 5px 0;
+}
+.card h4 {
+    color: rgb(90, 27, 179);
+}

@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+.section-cart {
+    padding: 100px 0 20px 0;
+}
+.section-cart > .container {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.section-cart > .container .total-price-and-cheacout-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-cart > .container .total-price-and-cheacout-div .total-price-div {
+    position: relative;
+    padding: 5px 0;
+}
+.section-cart > .container .total-price-and-cheacout-div .total-price-div h2.total-price {
+    display: flex;
+    color: snow;
+    font-size: 18px;
+}
+.section-cart > .container .total-price-and-cheacout-div .total-price-div h2.total-price > span {
+    color: #00bac7;
+    margin-left: 5px;
+}
+
+.section-cart > .container .total-price-and-cheacout-div .chickout-div {
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-cart > .container .total-price-and-cheacout-div .chickout-div > a {
+    position: relative;
+    padding: 7px 15px;
+    color: snow;
+    background-color: #00bac7;
+    transition: .5s;
+}
+
+.section-cart > .container .total-price-and-cheacout-div .chickout-div > a:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 20px #00bac7);
+}
+
+.products-table {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+.products-table thead tr th {
+    background-color: rgb(0, 0, 0);
+    color: snow;
+    padding: 7px;
+    border: none;
+}
+.products-table tr td {
+    padding: 7px;
+    color: rgb(50 150 191);
+    text-align: center;
+}
+.products-table tr td button.delete-btn {
+    background-color: red;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    color: snow;
+}
+.products-table tr td button.delete-btn:hover {
+    filter: drop-shadow(0 0 15px red);
+}
+.products-table.empty-table::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00bac7;
+}
+.products-table.empty-table::after {
+    content: "Your cart is currently empty.!";
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(0 186 199);
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    background-color: #393939;
+    left: 0;
+    bottom: -50px;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.section-cart > .container .going-shop-btn {
+    position: relative;
+    padding: 9px 20px;
+    background-color: #00bac7;
+    border-radius: 3px;
+    overflow: hidden;
+    color: snow;
+    transition: .5s;
+    margin: auto;
+}
+.section-cart > .container .going-shop-btn:hover {
+    filter: drop-shadow(0 0 20px #00bac7);
+}
+
+
+.section-cart .popup-deleting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(60, 17, 159, 0.783);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.section-cart .popup-deleting.active {
+    visibility: visible;
+    opacity: 1;
+}
+.section-cart .popup-deleting .popub-box {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    border-radius: 4px;
+}
+.section-cart .popup-deleting .popub-box h3.deleting-text {
+    margin-top: 10px;
+}
+
+.section-cart .popup-deleting .popub-box .popub-box-btns {
+    position: relative;
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-cart .popup-deleting .popub-box .popub-box-btns button {
+    position: relative;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s;
+    background-color: #e6e6e6;
+    margin: 20px 0 10px 0;
+}
+.section-cart .popup-deleting .popub-box .popub-box-btns button.agree-btn:hover {
+    background-color: red;
+    color: snow;
+    
+}
+.section-cart .popup-deleting .popub-box .popub-box-btns button.cansel-btn {
+    background-color: rgb(80, 15, 201);
+    color: snow;
+}
+@media (max-width : 600px) {
+    .products-table.empty-table::after {
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+}
+@media (min-width: 10px) and (max-width : 380px) {
+    .section-cart > .container {
+        width: 98%;
+    }
+    .products-table thead tr th {
+        font-size: 9px;
+        padding: 3px;
+    }
+    .products-table tbody tr td {
+        padding: 0px;
+        color: rgb(41, 202, 214);
+        font-size: 8px;
+    }
+    .products-table tr td button.delete-btn {
+        padding: 3px 7px;
+        font-size: 9px;
+    }
+    .section-cart > .container .going-shop-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .section-cart > .container .total-price-and-cheacout-div .chickout-div > a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+}
+@media (min-width: 381px) and (max-width : 475px) {
+    .section-cart > .container {
+        width: 98%;
+    }
+    .products-table thead tr th {
+        font-size: 12px;
+        padding: 3px;
+    }
+    .products-table tbody tr td {
+        font-size: 10px;
+        padding: 3px;
+    }
+    .section-cart > .container .total-price-and-cheacout-div .chickout-div > a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+@media (max-width : 838px) {
+    .section-cart {
+        padding-top: 160px;
+    }
+}

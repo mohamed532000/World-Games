@@ -1,0 +1,247 @@
+.head-of-home {
+    height: 100vh;
+}
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.head-of-home .slide .container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    background-color: transparent;
+}
+.head-of-home .container .home-text {
+    position: relative;
+    width: 550px;
+    top: 20%;
+    transform: translateY(-20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.head-of-home .container .home-text h2.text-title {
+    font-size: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: snow;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.head-of-home .slide .container .home-text h2.text-title::after {
+    content: "01";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    color: snow;
+    font-size: 20px;
+}
+.head-of-home .slide.second-slide .container .home-text h2.text-title::after {
+    content: "02";
+}
+.head-of-home .slide.last-slide .container .home-text h2.text-title::after {
+    content: "03";
+}
+.head-of-home .slide .container .home-text .text-title img {
+    width: 70px;
+    margin-right: -10px;
+}
+.head-of-home .slide .container .home-text .text-title h2 {
+    color: snow;
+    letter-spacing: 1px;
+}
+.head-of-home .slide .container .home-text p {
+    color: snow;
+    margin: 15px 0;
+    text-align: center;
+}
+.head-of-home .slide .container .home-text button {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 30px;
+    transform: skew(-20deg);
+    border: none;
+    outline: none;
+    color: snow;
+    font-size: 17px;
+    transition: .5s;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #001fff, #000000);
+}
+.head-of-home .slide .container .home-text button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    background-image: linear-gradient(45deg, #000000 , #001fff);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+    z-index: 1;
+}
+.head-of-home .slide .container .home-text button h3 {
+    position: relative;
+    z-index: 9999;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: .5px;
+}
+.head-of-home .slide .container .home-text button:hover::after {
+    opacity: 1;
+}
+.head-of-home .slide .container .home-text button:hover {
+    transform: skew(0);
+}
+.head-of-home .slide .container .home-text .social-media {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.head-of-home .slide .container .home-text .social-media a {
+    margin: 10px;
+}
+.head-of-home .slide .container .home-text .social-media a i {
+    color: snow;
+    font-size: 24px;
+    transition: .5s;
+}
+.head-of-home .slide .container .home-text .social-media a i:hover {
+    transform: translateY(-5px);
+}
+.boxes-container,
+.text-and-video-container,
+.matches-boxes-container  {
+    width: 100%;
+    padding: 20px 0;
+}
+.text-and-video-container {
+    justify-content: space-between;
+}
+.text-and-video-container .game-theme {
+    position: relative;
+    width: 450px;
+    color: snow;
+    margin-left: 20px;
+}
+.text-and-video-container .game-theme h2 {
+    margin: 10px 0;
+    font-size: 30px;
+}
+.text-and-video-container .stream-video-1 {
+    width: 600px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+.boxes-container .normal-box-home {
+    margin: 15px 20px;
+}
+.swiper-container,
+.matches-boxes-container {
+    width: 100%;
+    padding: 50px 0;
+}
+.matches-boxes-container {
+    flex-direction: column;
+}
+.matches-boxes-container .title-of-matches {
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.matches-boxes-container .title-of-matches h2 ,
+.matches-boxes-container .title-of-matches ul li {
+    color: snow;
+    transition: .5s;
+    position: relative;
+}
+.matches-boxes-container .title-of-matches h2 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #181bb3, #ff0000);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+@media (min-width: 100px) and (max-width: 715px) {
+    .head-of-home .slide .container .home-text {
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+    .text-and-video-container .game-theme {
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .text-and-video-container .game-theme h2 {
+        font-size: 19px;
+    }
+}
+@media (max-width: 415px) {
+    .head-of-home .slide .container .home-text {
+        justify-content: center;
+        align-items: center;
+    }
+    .head-of-home .slide .container .home-text h2.text-title {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+@media (min-width: 100px) and (max-width: 1029px) {
+    .text-and-video-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .text-and-video-container .stream-video-1 {
+        margin: 40px 0;
+    }
+}
+@media (max-width: 630px) {
+    .text-and-video-container .game-theme {
+        text-align: center;
+    }
+    .text-and-video-container .read-more {
+        margin: 10px auto;
+    }
+    .text-and-video-container .game-theme,
+    .text-and-video-container .stream-video-1 {
+        width: 100%;
+    }
+}
+@media (max-width: 802px) {
+    .matches-boxes-container .title-of-matches {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .matches-boxes-container .title-of-matches > ul.ulForHome {
+        margin: 20px 0;
+    }
+}

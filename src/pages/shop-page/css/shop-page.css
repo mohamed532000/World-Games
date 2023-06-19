@@ -1,0 +1,926 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.shop-section {
+    padding: 100px 0 20px 0;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub,
+.shop-section .parent-of-welcome-popub.sign-in-popub {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: #ffffffad;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999999999;
+    transition: .2s;
+    overflow: hidden;
+}
+.shop-section .parent-of-welcome-popub.sign-in-popub {
+        background-color: #4b4b4bad;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub.active ,
+.shop-section .parent-of-welcome-popub.sign-in-popub.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub,
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub {
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #7516cd;
+    border-radius: 5px;
+}
+
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub {
+    background-color: white;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub.active .welcome-popub,
+.shop-section .parent-of-welcome-popub.sign-in-popub.active .welcome-popub {
+    animation: popub-aniamte-welcome .3s .7s  ease-in 1 both;
+}
+@keyframes popub-aniamte-welcome {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub.hidden,
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub.hidden {
+    animation: hidden-popub-animate .3s ease-in both 1;
+}
+@keyframes hidden-popub-animate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub > i {
+    margin: 10px 0;
+    font-size: 50px;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub > p {
+    text-align: center;
+    margin: 5px 0;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub .info-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 7px 0;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub .info-div i {
+    margin-right: 10px;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub .info-div h3 {
+    color: #212121;
+    font-size: 16px;
+    font-weight: normal;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub  button.exploring-btn {
+    position: relative;
+    margin: 10px 0;
+    padding: 16px 38px;
+    color: snow;
+    background-color: black;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+.shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub  button.exploring-btn:hover {
+    transform: translateY(-5px);
+}
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > i {
+    font-size: 60px;
+    margin: 10px 0;
+}
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > h2 {
+    margin: 5px 0;
+    color: #212121;
+}
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > p {
+    text-align: center;
+}
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > button {
+    margin: 10px 0;
+    padding: 15px 20px;
+    background-color: #212121;
+    color: snow;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    margin: 15px 0 10px 0;
+}
+.shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > button:hover {
+    transform: translateY(-5px);
+    background-color: #212121;
+}
+.container.heading-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    padding-top: 120px;
+    transition: .5s;
+    opacity: 1;
+}
+.container.heading-container.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+.container.heading-container.hidden.none {
+    display: none;
+}
+.container.heading-container > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.container.heading-container span.shop-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 37, 37, 0.751);
+}
+.container.heading-container .shop-text-head {
+    position: relative;
+    transform: translateY(-30px);
+    left: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container.heading-container .shop-text-head h2.text-title {
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    color: snow;
+    font-weight: bold;
+    letter-spacing: 1px;
+}   
+.container.heading-container .shop-text-head p {
+    color: snow;
+    margin: 15px 0;
+    text-align: center;
+}
+.container.heading-container .shop-text-head .accounts-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.container.heading-container .shop-text-head .accounts-div > button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin: 5px 15px;
+    text-decoration: none;
+    overflow: hidden;
+    color: snow;
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition: .5s;
+    cursor: pointer;
+}
+.container.heading-container .shop-text-head .accounts-div > button.sign-in-btn {
+    background-color: #0a82ec;
+}
+.container.heading-container .shop-text-head .accounts-div button.sign-up-btn {
+    background-color: #0d28ab;
+}
+.container.heading-container .shop-text-head .accounts-div button.sign-up-btn:hover {
+    background-color: #0a82ec;
+}
+.container.heading-container .shop-text-head .accounts-div button.sign-in-btn {
+    background-color: #dedede;
+    color: rgb(40, 40, 40);
+}
+.container.heading-container .shop-text-head .accounts-div button.sign-in-btn:hover {
+    background-color: #b8b8b8;
+    color: rgb(40, 40, 40);
+}
+
+
+.sign-in-div {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(202, 202, 202, 0.678);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999999999;
+}
+.sign-in-div.active {
+    visibility: visible;
+    opacity: 1;
+}
+.hide-sign-in-div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: transparent;
+    border: 1.5px solid rgb(42, 20, 121);
+    cursor: pointer;
+    z-index: 99;
+    transition: .5s;
+}
+.hide-sign-in-div > i {
+    color: rgb(42, 20, 121);
+    transition: .5s;
+}
+.hide-sign-in-div:hover {
+    border-color: snow
+}
+.hide-sign-in-div:hover > i {
+    color: snow;
+}
+.sign-in-div .container.sign-in-container {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+.sign-in-div .sign-in-form-div {
+    position: relative;
+    background-image: linear-gradient(45deg , rgb(55, 34, 113) , rgb(62, 59, 192));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: .5px .5px 30px  rgb(23, 14, 143);
+}
+.sign-in-div .sign-in-form-div .form-text {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.sign-in-div .sign-in-form-div .form-text > h2 {
+    margin-bottom: 5px;
+    color: snow;
+    letter-spacing: 1px;
+}
+.sign-in-div .sign-in-form-div .form-text > h3 {
+    color: snow;
+}
+.sign-in-div .sign-in-form-div > form {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sign-in-div .sign-in-form-div > form > p.no-account-text {
+    color: #cecece;
+    transition: .3s;
+    transform: translateY(5px);
+    opacity: 0;
+}
+.sign-in-div .sign-in-form-div > form > p.no-account-text.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.sign-in-div .sign-in-form-div > form .wrong-pass-or-email-popub {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: rgb(0, 221, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.sign-in-div .sign-in-form-div > form .wrong-pass-or-email-popub.active {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+}
+.sign-in-div .sign-in-form-div > form .input-div {
+    position: relative;
+    width: 90%;
+    height: 40px;
+    border: 1px solid black;
+    margin: 20px 0;
+}
+.sign-in-div .sign-in-form-div > form .input-div input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-indent: 10px;
+    color: snow;
+}
+.sign-in-div .sign-in-form-div > form .sign-in-or-reset {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign-in-div .sign-in-form-div > form .sign-in-or-reset input {
+    padding: 10px 17px;
+    outline: none;
+    border: none;
+    background-color: #212121;
+    margin: 10px 50px;
+    font-size: 16px;
+    color: snow;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+}
+.sign-in-div .sign-in-form-div > form .sign-in-or-reset input.reset {
+    background-color: #999898;
+}
+.sign-in-div .sign-in-form-div > form .sign-in-or-reset input.sign-in-btn:hover {
+    background-color: #121212;
+}
+.sign-in-div .sign-in-form-div > form a {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin: 20px auto;
+    color: snow;
+    text-decoration: underline;
+}
+.sign-up-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    background-color: rgba(30, 30, 30, 0.934);
+    z-index: 99999999999;
+}
+.sign-up-div.active {
+    visibility: visible;
+    opacity: 1;
+}
+.sign-up-div .container {
+    position: relative;
+    background-color: transparent;
+}
+.sign-up-div .container .hide-sign-in-div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: transparent;
+    border: 1px solid rgb(32, 64, 228);
+    cursor: pointer;
+    z-index: 99;
+}
+.sign-up-div .container .sign-up-text {
+    position: relative;
+    width: 40%;
+}
+.sign-up-div .container .sign-up-text h2.title-text,
+.sign-up-div .container .sign-up-text p {
+    margin: 10px 0;
+    color: snow;
+    text-align: center;
+}
+.sign-up-div .container .form-div {
+    position: relative;
+    padding: 0 5px;
+    width: 90%;
+}
+.sign-up-div .container .form-div form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sign-up-div .container .form-div form .input-div,
+.sign-up-div .container .form-div form .input-div.country-div {
+    position: relative;
+    width: 40%;
+    height: 40px;
+    margin: 10px;
+    border: 1px solid rgb(32, 64, 228);
+}
+.sign-up-div .container .form-div form .input-div.country-div {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: none;
+}
+.sign-up-div .container .form-div form .input-div.country-div > label {
+    margin: 5px 0;
+    color: snow;
+}
+.sign-up-div .container .form-div form .input-div > input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: snow;
+    text-indent: 10px;
+}
+.sign-up-div .container .form-div form .input-div select {
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    color: snow;
+    border: 1px solid rgb(22, 48, 179);
+    width: 100%;
+}
+.sign-up-div .container .form-div > form > .input-div select:focus {
+    color: rgb(31, 31, 31);
+}
+.sign-up-div .container .form-div form select::-webkit-scrollbar-thumb {
+    background-color: rgb(33, 35, 171);
+    box-shadow:1px 1px 2px 2px rgb(33, 35, 171);
+    border-radius: 9px;
+}
+.sign-up-div .container .form-div form select::-webkit-scrollbar-track {
+    background-color: rgb(39, 39, 39);
+}
+.sign-up-div .container .form-div form select::-webkit-scrollbar {
+    background-color: rgb(33, 35, 171);
+}
+.sign-up-div .container .form-div > form .create-or-reset-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.sign-up-div .container .form-div > form .create-or-reset-div > input {
+    padding: 8px 17px;
+    outline: none;
+    border: none;
+    background-color: rgb(194, 194, 194);
+    margin: 10px 50px;
+    font-size: 16px;
+    color: snow;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+}
+.sign-up-div .container .form-div form .create-or-reset-div > input.create-input {
+    background-color: rgb(56, 17, 200);
+}
+.sign-up-div .container .form-div form .create-or-reset-div > input.create-input:hover {
+    filter: drop-shadow(0 0 10px rgb(56, 17, 200));
+}
+.sign-up-div .container .form-div form .create-or-reset-div > input.reset-input {
+    background-color: rgb(0, 132, 146);
+}
+.sign-up-div .container .form-div form .create-or-reset-div > input.reset-input:hover {
+    filter: drop-shadow( 0 0 10px rgb(0, 132, 146));
+}
+.sign-up-div .container .form-div .confirm-pass-popub {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 20px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.sign-up-div .container .form-div .confirm-pass-popub.active {
+    visibility: visible;
+    opacity: 1;
+}
+.sign-up-div .container .form-div .confirm-pass-popub h3 {
+    margin: 10px 0;
+    color: #0d28ab;
+    text-align: center;
+    font-size: 16px;
+}
+.sign-up-div .container .form-div .confirm-pass-popub > button {
+    position: relative;
+    width: fit-content;
+    padding: 7px 15px;
+    color: snow;
+    background-color: #0d28ab;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container.games-container {
+    width: 98%;
+    gap: 10px;
+    margin: 0 auto 50px auto;
+}
+.container.games-container .heading {
+    margin: 40px 0 20px 0;
+}
+.container.games-container .game-box {
+    position: relative;
+    width: 280px;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 10px;
+    overflow: hidden;
+}
+.container.games-container .game-box .game-img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: inherit;
+}
+.container.games-container .game-box .game-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+.container.games-container .game-box:hover .game-img img {
+    scale: 1.1;
+}
+.container.games-container .game-box .game-info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+.container.games-container .game-box .game-info > h2.game-name {
+    color: snow;
+    margin: 15px 0;
+    font-size: 18px;
+}
+.container.games-container .game-box .game-info > p.game-description {
+    color: #c9c9c9;
+    margin: 0 0 10px 0;
+}
+.container.games-container .game-box .game-img .cover {
+    position: absolute;
+    right: -300px;
+    height: 200px;
+    background-image: linear-gradient(to left, black, transparent);
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .5s;
+    opacity: 0;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    overflow: hidden;
+}
+.container.games-container .game-box:hover .game-img .cover {
+    right: 0;
+    opacity: 1;
+}
+.container.games-container .game-box .game-img .cover > a ,
+.container.games-container .game-box .game-img .cover > i {
+    color: snow;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 20px;
+}
+.container.games-container .game-box .game-img .cover > a:hover ,
+.container.games-container .game-box .game-img .cover > i:hover {
+    transform: translateY(-5px);
+}
+.container.games-container .game-box .game-img .cover > i.active {
+    color: rgb(218, 17, 17);
+}
+
+
+
+.container.vr-headest-container {
+    width: 98%;
+    gap: 10px;
+    margin: 50px auto;
+}
+.container.vr-headest-container .heading-and-switch-VR {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 30px 0;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading h2.section-title h2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 40px;
+    background-image: linear-gradient(to right, #181bb3, #ff0000);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading h2.section-title h2 img{
+    width: 100px;
+    margin-right: 7px;
+}
+.container.vr-headest-container .heading-and-switch-VR > ul {
+    justify-content: center;
+    width: 40%;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading {
+    width: 40%;
+}
+@media (max-width: 620px) {
+    .container.vr-headest-container .heading-and-switch-VR .heading,
+    .container.vr-headest-container .heading-and-switch-VR > ul {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container.vr-headest-container .heading-and-switch-VR > ul {
+        margin: 20px 0;
+    }
+    .container.vr-headest-container .heading-and-switch-VR .heading {
+        flex-direction: column;
+    }
+}
+.container.vr-headest-container .heading-and-switch-VR > ul > li:nth-child(5),
+.container.vr-headest-container .heading-and-switch-VR > ul > li:last-child {
+    display: none;
+}
+.container.vr-headest-container .heading-and-switch-VR .heading > h2 > i {
+    letter-spacing: 10px;
+}
+.container.vr-boxes-container {
+    width: 100%;
+}
+
+
+
+@media (min-width:10px) and (max-width: 370px) {
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub {
+        width: 90%;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub > h2,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > h2 {
+        font-size: 15px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub > p,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > p {
+        font-size: 13px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub .info-div {
+        margin: 5px 0;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub .info-div > h3 {
+        font-size: 12px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub button.exploring-btn,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub button.exploring-btn {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+}
+@media (min-width:371px) and (max-width: 500px) {
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub {
+        width: 340px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub > h2 {
+        font-size: 17px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub > p,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub > p {
+        font-size: 14px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub .info-pobub .info-div > h3 {
+        font-size: 13px;
+    }
+    .shop-section .parent-of-welcome-popub.sign-up-popub .welcome-popub button.exploring-btn,
+    .shop-section .parent-of-welcome-popub.sign-in-popub .welcome-popub button.exploring-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+@media (min-width:10px) and (max-width: 500px) {
+    .sign-up-div .container .form-div {
+        margin-top: 150px;
+    }
+    .sign-up-div .container .form-div form .input-div,
+    .sign-up-div .container .form-div form .input-div.country-div {
+        width: 100%;
+        margin: 5px;
+        height: 35px;
+    }
+    .sign-up-div .container .form-div form .input-div.country-div {
+        height: auto;
+    }
+    .sign-up-div .container .form-div > form .create-or-reset-div > input {
+        margin: 10px ;
+        padding: 6px 10px;
+    }
+}
+@media (min-width: 10px) and (max-width: 307px) {
+    .sign-up-div .container .hide-sign-in-div {
+        position: absolute;
+        top: 159px;
+        right: -5px;
+    }
+    .container.heading-container .shop-text-head .accounts-div > button {
+        padding: 7px 7px;
+        margin: 5px 15px;
+        font-size: 13px;
+    }
+}
+@media (min-width: 302) and (max-width: 510px) {
+    .sign-up-div .container .hide-sign-in-div {
+        position: relative;
+        transform: translateY(200px);
+    }
+}
+@media (min-width: 511px) and (max-width: 836px){
+    .sign-up-div .container .hide-sign-in-div {
+        top: 156px;
+        right: 0;
+    }
+}
+@media(min-width: 501px) and (max-width: 836px) {
+    .sign-up-div .container .form-div {
+        margin-top: 150px;
+    }
+    .sign-up-div .container .form-div form {
+        width: 100%;
+    }
+    .sign-up-div .container .form-div form .input-div,
+    .sign-up-div .container .form-div form .input-div.country-div {
+        width: 80%;
+        margin: 5px;
+        height: 35px;
+    }
+    .sign-up-div .container .form-div form .input-div.country-div {
+        height: auto;
+    }
+}
+@media (min-width: 100px) and (max-width: 440px) {
+    .sign-in-div .sign-in-form-div {
+        width: 90%;
+    }
+    .sign-in-div .sign-in-form-div > form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .sign-in-div .sign-in-form-div > form .sign-in-or-reset input {
+        margin: 10px 10px;
+    }
+    .sign-in-div .sign-in-form-div .form-text > h2 {
+        font-size: 17px;
+    }
+    .sign-in-div .sign-in-form-div .form-text > h3 {
+        font-size: 15px;
+    }
+}
+@media  (max-width: 855px) {
+    .sign-in-div .container {
+        background-color: transparent;
+    }
+    .sign-in-div .container .sign-in-hello {
+        display: none;
+    }
+}
+@media (max-width: 775px) {
+    .container.vr-headest-container .heading-and-switch-VR {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container.vr-headest-container .heading-and-switch-VR .heading {
+        text-align: center;
+        width: 100%;
+    }
+    .container.vr-headest-container .heading-and-switch-VR .heading h2.section-title h2 {
+        justify-content: center;
+        align-items: center;
+    }
+    .container.vr-headest-container .heading-and-switch-VR > ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 452px) {
+    .container.heading-container .shop-text-head {
+        padding: 50px 5px 10px 5px;
+    }
+    .container.heading-container .shop-text-head h2.text-title {
+        font-size: 20px;
+    }
+    .container.heading-container .shop-text-head > p {
+        font-size: 15px;
+    }
+    .container.heading-container .shop-text-head .accounts-div a {
+        padding: 6px 15px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 837px) {
+    .container.heading-container .shop-text-head {
+        width: 100%;
+    }
+}

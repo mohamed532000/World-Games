@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.checkout-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    padding: 100px 0 50px 0;
+}
+.checkout-section .head-of-section ,
+.checkout-section .container {
+    position: relative;
+    margin: 20px auto;
+    width: 70%;
+}
+.checkout-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgb(215, 215, 215);
+}
+.checkout-section .container .head-of-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.checkout-section .container .head-of-section > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px;
+    color: #777;
+}
+.checkout-section .container .head-of-section > a > i {
+    margin-right: 7px;
+}
+.checkout-section .container .head-of-section > h2 {
+    color: #777;
+}
+.checkout-section .container  > form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-section .container  > form .input-div {
+    position: relative;
+    width: 40%;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: .5px solid rgb(206, 206, 206);
+    margin: 10px 0 10px 5px;
+
+}
+.checkout-section .container  > form .date-of-order {
+    width: 80%;
+    margin: 20px 0;
+}
+.checkout-section .container  > form .date-of-order > input {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgb(206, 206, 206);
+    padding: 10px;
+    outline: none;
+}
+.checkout-section .container  > form .input-div.email-div,
+.checkout-section .container  > form .input-div.card-name,
+.checkout-section .container  > form .input-div.card-num {
+    width: 80%;
+}
+.checkout-section .container  > form .input-div > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+}
+.select-pay-div {
+    position: relative;
+    width: 80%;
+    margin: 10px 0 10px 5px;
+}
+.select-pay-div > h4 {
+    margin: 10px 0;
+}
+.select-pay-div > .pay-types {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.select-pay-div > .pay-types .pay-type {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select-pay-div > .pay-types .pay-type:last-child {
+    margin-left: 40px;
+}
+.select-pay-div > .pay-types .pay-type label > .credits-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+.select-pay-div > .pay-types .pay-type > input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 7px;
+}
+.select-pay-div > .pay-types .pay-type label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select-pay-div > .pay-types .pay-type label > .credits-images > img {
+    margin: 0 5px;
+    width: 30px;
+}
+.select-pay-div > .pay-types .pay-type label > img {
+    width: 40px;
+}
+
+
+
+.order-summary-div {
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.order-summary-div > h2 {
+    margin: 20px 0;
+}
+.order-summary-div .total-amount {
+    border:  1px solid rgb(193, 193, 193);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.order-summary-div .total-amount > .head {
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto 10px auto;
+    padding: 10px 0;
+    align-items: center;
+}
+.order-summary-div .total-amount > .head::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(193, 193, 193);
+    width: 100%;
+    height: .5px;
+}
+.order-summary-div .total-amount .amount {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.order-summary-div .total-amount .amount > h4 {
+    margin: 20px 0;
+}
+.order-summary-div .total-amount > span.secure-text {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: rgb(193, 193, 193);
+}
+.order-summary-div .total-amount > span.secure-text > i {
+    margin-right: 7px;
+}
+
+.container > form > .submit-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: fit-content;
+    padding: 15px 60px;
+    background-color: transparent;
+    color: snow;
+    margin: 40px 0;
+    font-size: 15px;
+    cursor: pointer;
+    background-image: linear-gradient(45deg , rgb(89, 47, 187), rgb(28, 100, 255));
+}
+.container > form > .submit-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    background-image: linear-gradient(45deg  , rgb(28, 100, 255) , rgb(89, 47, 187));
+    z-index: 5;
+    opacity: 0;
+}
+.container > form > .submit-btn:hover::after {
+    opacity: 1;
+}
+.container > form > .submit-btn > p {
+    z-index: 10;
+}
+.container > form > .submit-btn > i {
+    color: snow;
+    margin-right: 5px;
+    z-index: 10;
+}
+.checkout-section .order-done-popub {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    z-index: 99999999999999;
+    backdrop-filter: blur(3px);
+    visibility: hidden;
+    opacity: 0;
+}
+.checkout-section .order-done-popub.active {
+    visibility: visible;
+    opacity: 1;
+}
+.checkout-section .order-done-popub > .done-popub {
+    position: relative;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253 253 253);
+    filter: drop-shadow(1px 1px 5px rgb(153, 153, 153));
+    border-radius: 5px;
+}
+.checkout-section .order-done-popub > .done-popub > img {
+    position: relative;
+    width: 100px;
+    margin: 10px 0;
+}
+.checkout-section .order-done-popub > .done-popub > h2,
+.checkout-section .order-done-popub > .done-popub > h4,
+.checkout-section .order-done-popub > .done-popub > a {
+    margin: 15px 0;
+    text-align: center;
+}
+.checkout-section .order-done-popub > .done-popub > h4 {
+    color: #777;
+}
+.checkout-section .order-done-popub > .done-popub > a {
+    position: relative;
+    padding: 10px 20px;
+    color: snow;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg  , rgb(28, 100, 255) , rgb(89, 47, 187));
+}
+
+
+
+
+@media (min-width: 100px) and (max-width: 650px) {
+    .checkout-section .container .head-of-section > h2 {
+        font-size: 17px;
+    }
+    .checkout-section .container .head-of-section > a {
+        font-size: 13px;
+    }
+    .checkout-section .container .head-of-section > a > i {
+        font-size: 12px;
+    }
+    .checkout-section .head-of-section,
+    .checkout-section .container {
+        width: 90%;
+    }
+    .checkout-section .container > form .input-div,
+    .checkout-section .container  > form .input-div.email-div,
+    .checkout-section .container  > form .input-div.card-name,
+    .checkout-section .container  > form .input-div.card-num,
+    .checkout-section .container > form .date-of-order,
+    .order-summary-div,
+    .select-pay-div,
+    .container > form > .submit-btn {
+        width: 90%;
+    }
+    .select-pay-div > h4 {
+        font-size: 14px;
+    }
+    .select-pay-div > .pay-types .pay-type:last-child {
+        margin-left: 0;
+    }
+    .select-pay-div > .pay-types .pay-type label > .credits-images > img {
+        width: 25px;
+    }
+    .select-pay-div > .pay-types .pay-type label {
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    .order-summary-div > h2 {
+        font-size: 17px;
+    }
+    .order-summary-div .total-amount > span.secure-text {
+        font-size: 12px;
+    }
+    .container > form > .submit-btn {
+        padding: 12px 40px;
+    }
+}
+
+
+@media(max-width: 840px) {
+    .checkout-section {
+        padding: 150px 0 50px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

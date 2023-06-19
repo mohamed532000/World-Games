@@ -1,0 +1,35 @@
+ul {
+    flex-wrap: wrap;
+}
+ul li {
+    padding: 7px 5px;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    color: snow;
+}
+ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    transition: .5s;
+    background-color: #501a87;
+}
+ul li:hover::after {
+    width: 100%;
+    height: 2px;
+}
+ul li:hover {
+    color: rgb(90, 27, 179);
+}
+ul li.active {
+    color: rgb(90, 27, 179);
+}
+ul li.active::after {
+    width: 100%;
+    height: 2px;
+}

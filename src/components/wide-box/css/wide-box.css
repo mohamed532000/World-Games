@@ -1,0 +1,136 @@
+.wide-box {
+    position: relative;
+    width: 90%;
+    display: none;
+    justify-content: space-between;
+    align-items: space-between;
+    background-color: rgb(80, 26, 135);
+    margin: 5px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    transition: .5s;
+    border-bottom: .5px solid rgba(225, 225, 225, 0.521);
+}
+/* .wide-box.all, */
+.wide-box.active {
+    display: flex;
+    animation: matchBoxAnimate .5s ease-in 1 both;
+}
+@keyframes matchBoxAnimate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.wide-box div.one-img {
+    position: relative;
+    width: 230px;
+    height: 150px;
+    overflow: hidden;
+}
+.wide-box div.one-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.wide-box .moment-img-and-info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wide-box .moment-img-and-info .one-img {
+    margin-right: 100px;
+}
+.wide-box:hover {
+    background-color: rgb(22, 95, 159);
+}
+.wide-box .winner-and-loser-boxes {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.wide-box .winner-and-loser-boxes h3 {
+    color: snow;
+}
+.wide-box .winner-and-loser-boxes .name-of-match {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+.wide-box a.watch-match-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.wide-box a.watch-match-link:hover {
+    transform: translateY(-5px);
+}
+.wide-box .watch-match-link i {
+    margin-right: 7px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.wide-box .watch-match-link i,
+.wide-box .watch-match-link h4 {
+    color: snow;
+    transition: .5s;
+}
+.wide-box .watch-match-link:hover i,
+.wide-box .watch-match-link:hover h4 {
+    color: rgb(28, 28, 28);
+}
+
+@media (min-width: 100px) and (max-width: 488px) {
+    .wide-box .winner-and-loser-boxes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 650px) {
+    .wide-box .moment-img-and-info {
+        flex-direction: column;
+    }
+    .wide-box .moment-img-and-info .one-img {
+        margin-right: 0;
+    }
+    .wide-box .moment-img-and-info .name-of-match {
+        margin: 20px 0;
+    }
+    .wide-box .moment-img-and-info .name-of-match > h2 {
+        font-size: 20px;
+    }
+    .wide-box .moment-img-and-info .name-of-match > h4 {
+        text-align: center;
+    }
+    .wide-box .watch-match-link {
+        margin: 20px 0;
+    }
+}
+@media (max-width: 705px) {
+    .wide-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .wide-box .watch-match-link {
+        margin: 20px 0;
+    }
+}
+@media (max-width: 955px) {
+    .wide-box .winner-and-loser-boxes .name-of-match {
+        margin: 20px 0;
+    }
+    .wide-box .winner-and-loser-boxes .name-of-match {
+        text-align: center;
+    }
+}

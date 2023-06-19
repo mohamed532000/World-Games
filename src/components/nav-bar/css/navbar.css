@@ -1,0 +1,256 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    padding: 7px 0;
+    transition: .3s;
+}
+.nav.on-scrolling {
+    background-color: rgb(39, 39, 39);
+    box-shadow: 1px 1px 10px rgb(65, 65, 65);
+    padding: 10px 0;
+}
+.nav.on-scrolling .container {
+    background-color: transparent;
+}
+.nav.on-scrolling span.end-of-the-website {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+.nav .container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+.nav .container .logo-link {
+    transition: .5s;
+}
+.nav .container .logo-link:hover {
+    transform: scale(1.1)rotate(-5deg);
+}
+.nav .container .logo-link > img {
+    width: 50px;
+}
+.nav .container > i.show-links {
+    color: snow;
+    font-size: 20px;
+    transition: .5s;display: none;
+    cursor: pointer;
+}
+.nav .container ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    transform: translateX(150px);
+}
+.nav .container ul li {
+    margin: 5px 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .container ul li::after {
+    content: "";
+    width: 0;
+    height: 0;
+}
+.nav .container ul li a {
+    position: relative;
+    color: snow;
+    transition: .5s;
+    padding: 7px 10px;
+    letter-spacing: 1px;
+}
+.nav .container ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    transition: .5s;
+    background-color: white;
+}
+.nav .container ul li a:hover {
+    color: rgb(30, 139, 234);
+}
+.nav .container ul li a:hover::after {
+    width: 100%;
+    height: 2px;
+}
+.nav .container ul li a.active {
+    color: rgb(30, 139, 234);
+}
+.nav .container ul li a.active::after {
+    width: 100%;
+    height: 2px;
+}
+.nav .container .nav-icons {
+    position: relative;
+}
+.nav .container .nav-icons .search-button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.nav .container .nav-icons > a i,
+.nav .container .nav-icons .search-button i {
+    color: snow;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.nav .container .nav-icons > a i:hover,
+.nav .container .nav-icons .search-button i:hover {
+    color: rgb(76, 35, 169);
+}
+.nav .container .nav-icons i.cart-icon.active {
+    color: rgb(76, 35, 169);
+}
+.search-div {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: rgba(19, 19, 19, 0.897);
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    height: 100vh;
+}
+.search-div.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 999999999;
+}
+.search-div .search-input {
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(226, 226, 226, 0.724);
+}
+.search-div .search-input input {
+    width: 340px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-indent: 10px;
+    color: snow;
+    transition: .5s;
+}
+.search-div .search-input > i {
+    cursor: pointer;
+    color: snow;
+    margin-right: 20px;
+    transition: .5s;
+}
+.search-div .search-input > i:hover {
+    color: rgb(77, 41, 168);
+}
+.search-div .hide-search-div {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    transform: translate(-80% , -40%);
+    padding: 5px 8px;
+    font-size: 17px;
+    background-color: transparent;
+    border: 1px solid rgba(226, 226, 226, 0.724);
+    color: snow;
+    cursor: pointer;
+}
+.nav-icons a .cart-icon span {
+    position: relative;
+    top: -10px;
+    left: -3px;
+    background-color: red;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 50%;
+}
+
+@media (max-width : 837px) {
+    .nav .container {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width : 730px) {
+    .nav .container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav .container ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 38, 38);
+        width: 100%;
+        top: -800%;
+        opacity: 0;
+    }
+    .nav .container > i.show-links {
+        display: flex;
+        order: 3;
+    }
+    .nav .container > i.show-links.clicked {
+        animation: show-link-animate .4s ease-in 1 both;
+    }
+    @keyframes show-link-animate {
+        0% , 100% {
+            scale: 1;
+        }
+        50% {
+            scale: 1.2;
+        }
+    }
+    .nav .container ul.active {
+        top: 120%;
+        opacity: 1;
+    }
+}
+@media (max-width: 475px) {
+    .nav .search-div .search-input {
+        width: 90%;
+        margin: auto;
+    }
+}
+@media (max-width: 1029.33px) {
+    .nav .container ul {
+        transform: translateX(0);
+    }
+}

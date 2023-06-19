@@ -1,0 +1,32 @@
+.lazy-load-div {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: rgb(28 27 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    opacity: 1;
+}
+.lazy-load-div img {
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
+.lazy-load-div.none {
+    visibility: hidden;
+    opacity: 0;
+}
+.lazy-load-div h1.loading-text {
+    color: snow;
+}
+@media (max-width: 600px) {
+    .lazy-load-div h1.loading-text {
+        font-size: 30px;
+    }
+}

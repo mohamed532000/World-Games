@@ -1,0 +1,131 @@
+.contact-section {
+    position: relative;
+    padding: 100px 0 20px 0;
+}
+.contact-section .map-container {
+    margin: 40px auto;
+    width: 100%;
+}
+.contact-section .contact-container {
+    margin: 60px auto 40px auto;
+}
+.container form.contact-form {
+    position: relative;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.container form.contact-form h2 {
+    margin: 10px 0 30px 10px;
+    color: snow;
+    font-size: 35px;
+}
+.container form.contact-form .inputs-div {
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container form.contact-form .inputs-div input {
+    width: 230px;
+    height: 40px;
+    outline: none;
+    text-indent: 10px;
+}
+.container form.contact-form .inputs-div input:first-of-type {
+    margin-right: 5px;
+}
+.container form.contact-form .inputs-div input:last-of-type {
+    margin-left: 5px;
+}
+.container form.contact-form textarea {
+    margin: 10px 0;
+    position: relative;
+    height: 120px;
+    outline: none;
+    padding: 10px 0 0 10px;
+    width: 100%;
+}
+.container form.contact-form .send-input {
+    position: relative;
+    width: fit-content;
+    padding: 10px 15px;
+    background-image: linear-gradient(to right , #3d246b , #182968);
+    border: none;
+    outline: none;
+    margin: 10px 0 10px 10px;
+    color: snow;
+    font-size: 17px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .5s;
+}
+.container form.contact-form .send-input:hover {
+    filter: drop-shadow(0px 0px 20px rgb(42, 42, 189));
+}
+.container .contact-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contact-info .info-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: snow;
+}
+.container .contact-info .info-box h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.container .contact-info .info-box p {
+    transition: .5s;
+}
+.container .contact-info .info-box h3:hover + p {
+    color: rgb(73, 97, 187);
+}
+
+@media (max-width: 555px) {
+    .container form.contact-form {
+        margin: 20px 0;
+        width: 100%;
+    }
+    .container .contact-info {
+        width: 100%;
+    }
+}
+@media (max-width: 572px) {
+    .container form.contact-form .inputs-div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    .container form.contact-form .inputs-div input {
+        margin: 0;
+    }
+    .container form.contact-form .inputs-div input:first-of-type,
+    .container form.contact-form .inputs-div input:last-of-type {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media (min-width: 732px) and (max-width: 837px) {
+    .contact-section {
+        padding: 120px 0 20px 0;
+    }
+}
+@media (max-width: 915px) {
+    .container form.contact-form {
+        margin: 20px 0;
+    }
+    .contact-section .contact-container {
+        flex-direction: column  ;
+    }
+}

@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.gellary-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 50px 0;
+}
+.gellary-section .container {
+    background-color: transparent;
+    margin: 60px 0;
+}
+.gellary-section ul {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/************* style for bog boxes *****************************/
+/************* style for bog boxes *****************************/
+
+/**************************** style for gellary boxes **************************/
+
+.box.gellary-box {
+    width: 550px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 400px;
+    padding: 0;
+    margin: 5px;
+    display: none;
+}
+.box.gellary-box.active {
+    display: flex;
+}
+.box.gellary-box.active {
+    display: flex;
+    animation: matchBoxAnimate .5s ease-in 1 both;
+}
+
+@keyframes matchBoxAnimate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.box.gellary-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.21);
+    transition: .5s;
+    opacity: 0;
+    z-index: 1;
+}
+.box.gellary-box:hover::after {
+    opacity: 1;
+}
+.box.gellary-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.box.gellary-box:hover img {
+    transform: scale(1.3)rotate(10deg);
+}
+.box.gellary-box .box-info {
+    background-color: rgba(54, 54, 54, 0.324);
+    position: absolute;
+    width: 60%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+    padding: 10px 0 10px 10px;
+    z-index: 99;
+}
+.box.gellary-box .box-info h2 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+.box.gellary-box:hover .box-info {
+    opacity: 1;
+}
+
+/************* style for gellary boxes ***********************/
+
+/* @media (max-width: 680px) {
+    .box.blog {
+        width: 80%;
+    }
+    .box.blog .read-more {
+        margin: 5px 0;
+    }
+}
+@media (max-width: 680px) {
+    .box.gellary-box {
+        width: 90%;
+        height: 250px;
+        margin: 10px 0;
+    }
+    .box.gellary .read-more {
+        margin: 5px 0;
+    }
+} */
+
+
+
+
+@media (max-width: 1029.33px) {
+    .Gellary-section > ul.ulForGellary {
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 838px) {
+    .Gellary-section {
+        padding: 160px 0 50px 0;
+    }
+}
