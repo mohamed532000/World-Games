@@ -193,22 +193,32 @@ function ShopPage() {
                                 
                                 if(signInEmailValue !== "" && signInPassword !== "") {
 
-                                    let userEmail = JSON.parse(window.localStorage.getItem("userData")).userEmailValue;
-                                    let userPassword = JSON.parse(window.localStorage.getItem("userData")).passwordValue;
+                                    
+                                    if(window.localStorage.length !== 0) {
+                                        let userEmail = JSON.parse(window.localStorage.getItem("userData")).userEmailValue;
+                                        let userPassword = JSON.parse(window.localStorage.getItem("userData")).passwordValue;
 
-                                    console.log(userEmail , userPassword)
-                                    if(signInEmailValue === userEmail && signInPassword === userPassword) {
-                                        signInDiv.classList.remove("active");
-                                        document.querySelector(".shop-section .parent-of-welcome-popub.sign-in-popub").classList.add("active");
-                                        askSection.classList.add("hidden");
-                                        window.localStorage.setItem("hiddenClass" , "hidden");
-                                    }else {
+                                        if(signInEmailValue === userEmail && signInPassword === userPassword) {
+                                            signInDiv.classList.remove("active");
+                                            document.querySelector(".shop-section .parent-of-welcome-popub.sign-in-popub").classList.add("active");
+                                            askSection.classList.add("hidden");
+                                            window.localStorage.setItem("hiddenClass" , "hidden");
+                                        }else {
+                                            setUserEmail(signInEmailValue)
+                                            document.querySelector(".no-account-text").classList.add("active");
+                                            setTimeout(()=>{
+                                                document.querySelector(".no-account-text").classList.remove("active");
+                                            },3000)
+                                        }
+                                    }
+                                    else {
                                         setUserEmail(signInEmailValue)
                                         document.querySelector(".no-account-text").classList.add("active");
                                         setTimeout(()=>{
                                             document.querySelector(".no-account-text").classList.remove("active");
                                         },3000)
                                     }
+
                                 }
                             }}> 
                                 <p className="no-account-text">there is no account with {userEmail}</p>
